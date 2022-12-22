@@ -56,9 +56,9 @@ class BeezUtils:
         low, high = 0, len(all_tx_hash) - 1
         while low <= high:
             mid = (low + high) // 2
-            if all_tx_hash[mid] == current_tx_hash:  # pylint: disable=no-else-return
+            if all_tx_hash[mid] == current_tx_hash:
                 return True
-            elif all_tx_hash[mid] < current_tx_hash:
+            if all_tx_hash[mid] < current_tx_hash:
                 low = mid + 1
             else:
                 high = mid - 1

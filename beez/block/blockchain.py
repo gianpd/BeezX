@@ -210,7 +210,6 @@ class Blockchain:
 
     def transaction_exist(self, transaction: Transaction):
         """Check if a given transaction exists in the current blockchain state."""
-        # TODO: Find a better solution to check if a transaction already exist into the blockchain!
         response = []
         for block in self.blocks():
             all_tx_hash = list(map(lambda x: x.identifier, block.transactions))
